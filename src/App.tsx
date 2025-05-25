@@ -1,7 +1,17 @@
+import { getCurrentWindow } from '@tauri-apps/api/window';
+
 import BackgroundImage from "./assets/temp.jpg"
 import "./App.css";
 
 function App() {
+  const handleMaximize = async () => {
+    try {
+      const appWindow = getCurrentWindow();
+      await appWindow.toggleMaximize();
+    } catch (error) {
+      console.error('Failed to maximize window:', error);
+    }
+  };
 
   return (
     <main className="container">
@@ -10,7 +20,7 @@ function App() {
       </div>
 
       <div className="container2">
-        <button type="button" className="open-btn">
+        <button type="button" className="open-btn" onClick={handleMaximize}>
           Open
         </button>
       </div>

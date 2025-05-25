@@ -15,6 +15,7 @@
         "title": "lume",
         "width": 1000,
         "height": 600,
+        "center": true,
         "decorations": false,
         "resizable": false,
         "closable": true,
