@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Zain";
+  src:
+    local("Zain"),
+    url("./fonts/Zain/Zain-Regular.ttf");
+}
+
+
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -5,7 +13,6 @@
   font-weight: 400;
 
   color: #0f0f0f;
-  /* background-color: #f6f6f6; */
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -22,9 +29,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  min-height: 70vh;
 }
-
 
 .background-image {
   position: absolute;
@@ -37,4 +45,32 @@
   filter: blur(5px);
   overflow: hidden;
   clip-path: inset(0 round 25px);
+}
+
+.container2 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.open-btn {
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  height: 3.25rem;
+  width: 17.5rem;
+  cursor: pointer;
+  transition: 0.5s all;
+  font-family: "Zain", sans-serif;
+  font-size: larger;
+  color: black;
+}
+
+.open-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 12px black;
 }

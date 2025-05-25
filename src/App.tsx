@@ -9,6 +9,12 @@ function App() {
         <img src={BackgroundImage} className="background-image" />
       </div>
 
+      <div className="container2">
+        <button type="button" className="open-btn">
+          Open
+        </button>
+      </div>
+      
     </main>
   );
 }
