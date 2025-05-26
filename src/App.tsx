@@ -8,7 +8,11 @@ function App() {
 	return (
 		<div className="app">
 			{isHidden ? (
-				<ScreenSaver onShow={() => setIsHidden(false)} />
+				<ScreenSaver
+					onShow={() => {
+						setIsHidden(false);
+					}}
+				/>
 			) : (
 				<InitView onHide={() => setIsHidden(true)} />
 			)}
